@@ -17,6 +17,7 @@
 
 * [ToyoDAdoubi/doubi](https://github.com/ToyoDAdoubi/doubi)
 
-
+## ss
+> wget https://raw.githubusercontent.com/develon2015/Script/master/ss.sh -O ss.sh && chmod +x ./ss.sh && ./ss.sh && rm ./ss.sh
 
 
