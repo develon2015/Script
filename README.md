@@ -16,7 +16,7 @@
 ## ssrmu
 
 * [ToyoDAdoubi/doubi](https://github.com/ToyoDAdoubi/doubi)
-> wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ./ssrmu.sh && bash sudo ./ssrmu.sh
+> wget https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ./ssrmu.sh && sudo ./ssrmu.sh
 
 ## ss
 > wget https://raw.githubusercontent.com/develon2015/Script/master/ss.sh -O ss.sh && chmod +x ./ss.sh && ./ss.sh && rm -rf ./ss.sh
