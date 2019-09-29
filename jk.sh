@@ -30,6 +30,7 @@ while (($i<$#)); do
                 addClassPath=$(eval echo "$""$j")
                 CLASSPATH="$CLASSPATH:${addClassPath// /:}" # 添加类路径, 同时替换空格为':', 方便使用通配符'*'和'?'
         else # 这里开始是类名
+		set -f # 禁用Shell通配符
                 javaClass="$(eval echo "$""$j")"
                 #echo "执行类$javaClass"
                 let k=j+1
@@ -39,7 +40,8 @@ while (($i<$#)); do
                         #echo "$toJava"
                         let k++
                 done
-                eval startJava '"$javaClass"' $toJava
+		set +f
+                eval startJava '"$javaClass"'  $toJava # 高能!非战斗人员撤离
                 exit 0
         fi
         let i++
