@@ -20,9 +20,15 @@ function startJava() {
         exit 0
 }
 
-i=0
+if (($#==0)); then
+	echo "交互式Kotlin解释器"
+	startJava
+	exit 0
+fi
+
+i=1
 while (($i<=$#)); do
-        let j=i
+        let j=i+1
         arg=$(eval echo "$""$j")
         #echo $arg
         if [ "$arg" == "-cp" ]; then
