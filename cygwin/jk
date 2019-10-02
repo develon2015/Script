@@ -1,6 +1,6 @@
 #!/bin/bash
 # jk cygwin版本
-kotlin=`cygpath -w '/cygdrive/e/eclipse/jee-2018-09/eclipse/configuration/org.eclipse.osgi/1011/0/.cp/lib'`
+kotlin=`cygpath -w '/cygdrive/e/kotlin/kotlinc/lib'`
 CLASSPATH='.'
 
 if (($#<1)); then

@@ -1,11 +1,9 @@
 #!/bin/bash
-kotlin='/cygdrive/e/eclipse/jee-2018-09/eclipse/configuration/org.eclipse.osgi/1011/0/.cp/lib'
 
 if [ "$1" == "-h" ]; then
         echo \
-"kc -cp ./target.jar -cp 'tomcat/lib/*spring*.jar' <Class> [参数列表...]
+"kc [参数列表...]
         执行org.jetbrains.kotlin.cli.jvm.K2JVMCompiler编译kotlin源文件
-        通过-cp 'classpath'来附加类路径, 通配符要用单引号''包装起来形成独立的参数
 "
         exit 0
 fi
@@ -15,5 +13,5 @@ if (($#==0)); then
 fi
 
 #eval echo "'""$kotlin/*""'"
-eval $(which jk) -cp '/cygdrive/e/eclipse/jee-2018-09/eclipse/configuration/org.eclipse.osgi/1011/0/.cp' -cp "'""$kotlin/*.jar""'" org.jetbrains.kotlin.cli.jvm.K2JVMCompiler "$@"
+eval $(which jk) -cp '/cygdrive/e/kotlin/kotlinc/lib/kotlin-compiler.jar' org.jetbrains.kotlin.cli.jvm.K2JVMCompiler "$@"
 
