@@ -12,11 +12,11 @@ if [ "$1" == "-h" ]; then
 fi
 
 function startJava() {
-        CLASSPATH="$CLASSPATH:$kotlin/kotlin-stdlib.jar:$kotlin/kotlin-reflect.jar:$kotlin/kotlin-compiler.jar"
+        #CLASSPATH="$CLASSPATH:$kotlin/kotlin-stdlib.jar:$kotlin/kotlin-reflect.jar"
         #echo "类加载路径->$CLASSPATH"
         #echo "参数数量$#"
         #echo "参数->""$@"
-        java -cp "$CLASSPATH" org.jetbrains.kotlin.cli.jvm.K2JVMCompiler "$@"
+        java -cp "$kotlin/kotlin-compiler.jar" org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -cp "$CLASSPATH" "$@"
         exit 0
 }
 
