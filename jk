@@ -38,12 +38,14 @@ while (($i<$#)); do
                 while (($k<=$#)); do
                         toJava="$toJava '$(eval echo "$""$k")'"
                         #echo "$toJava"
-                        let k++
+                        #let k++
+			shift 1
                 done
 		set +f
                 eval startJava '"$javaClass"'  $toJava # 高能!非战斗人员撤离
                 exit 0
         fi
-        let i++
+        #let i++
+	shift 1
 done
 
