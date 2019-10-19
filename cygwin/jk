@@ -17,7 +17,7 @@ function startJava() {
         #echo "类加载路径->$CLASSPATH"
         #echo "参数数量$#"
         #echo "参数->""$@"
-        java -cp "$CLASSPATH" -Dfile.encoding=utf-8 "$@"
+        eval java -cp "'""$CLASSPATH""'" -Dfile.encoding=utf-8 "$@"
         exit 0
 }
 
@@ -41,12 +41,14 @@ while (($i<$#)); do
                 while (($k<=$#)); do
                         toJava="$toJava '$(eval echo "$""$k")'"
                         #echo "$toJava"
-                        let k++
+                        #let k++
+			shift 1
                 done
 		set +f
                 eval startJava '"$javaClass"'  $toJava # 高能!非战斗人员撤离
                 exit 0
         fi
-        let i++
+        #let i++
+	shift 1
 done
 
