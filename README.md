@@ -8,6 +8,7 @@
 客户端
 ```
 wget 'https://github.com/coyove/goflyway/releases/download/2.0.0rc1/goflyway_linux_amd64.tar.gz'
+tar xvf goflyway_linux_amd64.tar.gz
 ./goflyway -up="服务器IP:服务器端口" -k="密码" -l="0.0.0.0:客户端端口" -g -U=http
 ```
 
