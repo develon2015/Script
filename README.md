@@ -1,9 +1,28 @@
 # Script
 
+## Reinstall
+
+```
+wget --no-check-certificate -qO ~/Network-Reinstall-System-Modify.sh 'https://www.cxthhhhh.com/CXT-Library/Network-Reinstall-System-Modify/Network-Reinstall-System-Modify.sh' && chmod a+x ~/Network-Reinstall-System-Modify.sh && bash ~/Network-Reinstall-System-Modify.sh -UI_Options
+```
+
+Password: `cxthhhhh.com`
+
 ## Ubuntu setup
 
 ```
-apt update && apt install -y wget && wget https://raw.githubusercontent.com/develon2015/Script/master/ubuntu_setup.sh && bash ubuntu_setup.sh
+apt update && apt install -y curl wget && wget https://raw.githubusercontent.com/develon2015/Script/master/ubuntu_setup.sh && bash ubuntu_setup.sh
+```
+
+## Enable bbr
+
+```
+sudo su
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+sysctl net.ipv4.tcp_available_congestion_control
+lsmod | grep bbr
 ```
 
 
