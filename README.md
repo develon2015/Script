@@ -1,4 +1,12 @@
 # Script
+
+## Ubuntu setup
+
+```
+apt update && apt install -y wget && wget https://raw.githubusercontent.com/develon2015/Script/master/ubuntu_setup.sh && bash ubuntu_setup.sh
+```
+
+
 ## Goflyway
 > wget https://raw.githubusercontent.com/develon2015/Script/master/goflyway.sh -O goflyway.sh && chmod +x goflyway.sh && ./goflyway.sh <br/>
 
